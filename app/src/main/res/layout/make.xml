@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation ="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Whats the question?"
+        android:id="@+id/question_text"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"/>
+
+
+    <EditText
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:ems="20"
+        android:inputType="text"
+        android:background="#ff1f36ff"
+        android:autoText="false"
+        android:layout_below="@+id/question_text"
+        android:textColor="#ffffffff"
+        android:layout_weight="40">
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="What's the Answer?"
+        android:id="@+id/answer_text"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_below="@+id/question"/>
+
+    <EditText
+        android:id="@+id/answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:ems="20"
+        android:inputType="text"
+        android:background="#ff1f36ff"
+        android:autoText="false"
+        android:layout_below="@+id/answer_text"
+        android:textColor="#ffffffff"
+        android:layout_weight="40">
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight ="1">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Card"
+            android:id="@+id/button_addCard"
+            android:layout_marginTop="30dp"
+            android:background="#ffb6b6b6"
+            android:textColor="#ff1f36ff"
+            android:textSize = "20sp"
+            android:layout_below="@+id/answer"
+            android:layout_weight ="5"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:id="@+id/back_button"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="5dp"
+            android:background="#ffb6b6b6"
+            android:textColor="#ff1f36ff"
+            android:textSize = "20sp"
+            android:layout_below="@+id/answer"
+            android:layout_weight ="5"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ff1f36ff">
+
+
+    <EditText
+        android:id="@+id/question_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:layout_margin="20dp"
+        android:background="#ffb6b6b6"
+        android:textColor="#ff1f36ff"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <EditText
+        android:id="@+id/answer_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:layout_margin="20dp"
+        android:background="#ffb6b6b6"
+        android:textColor="#ff1f36ff"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Card"
+        android:layout_weight="1.17"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="#ffb6b6b6"
+        android:textColor="#ff1f36ff"
+        android:textSize="20sp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next Question"
+        android:id="@+id/next_ques"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="#ffb6b6b6"
+        android:textColor="#ff1f36ff"
+        android:textSize="20sp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/back_button"
+        android:layout_below="@+id/edit_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="#ffb6b6b6"
+        android:textColor="#ff1f36ff"
+        android:textSize="20sp"/>
+
+</LinearLayout>
