@@ -15,37 +15,37 @@ import android.widget.Button;
 
 
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends Activity implements OnClickListener { //the MainActivity class
 
-    private Button buttonmake;
-    private Button buttonstudy;
-    private Button buttonscore;
-    public static Deck myDeck;
-    public static scoring score1;
+    private Button buttonmake; //button make variable for the make button
+    private Button buttonstudy; //button study variable for the study button
+    private Button buttonscore; //button score variable for the score button
+    public static Deck myDeck; //myDeck variable from the Deck class
+    public static scoring score1; //score1 variable from the scoring class
 
 
     @Override
-    public void onCreate(Bundle savedInstanceState)
+    public void onCreate(Bundle savedInstanceState) //function for when the activity loads
     {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main); //loads the activity_main.xml
 
-        buttonmake = (Button)findViewById(R.id.make_button);
-        buttonstudy = (Button)findViewById(R.id.study_button);
-        buttonscore =(Button)findViewById(R.id.scores_button);
+        buttonmake = (Button)findViewById(R.id.make_button); //sets the button make variable equal to the make_button
+        buttonstudy = (Button)findViewById(R.id.study_button); //sets the button study variable equal to the study_button
+        buttonscore =(Button)findViewById(R.id.scores_button); //sets the button score variable equal to the scores_button
 
-        buttonmake.setOnClickListener(this);
-        buttonstudy.setOnClickListener(this);
-        buttonscore.setOnClickListener(this);
+        buttonmake.setOnClickListener(this); //allows for the make button to have a function for when it is clicked
+        buttonstudy.setOnClickListener(this); //allows for the study button to have a function for when it is clicked
+        buttonscore.setOnClickListener(this); //allows for the score button to have a function for when it is clicked
 
-        myDeck = new Deck();
-        score1 = new scoring();
+        myDeck = new Deck(); //makes a dynamic myDeck variable from the Deck class
+        score1 = new scoring(); //makes a dynamic score1 variable from the scoring class
 
 
     }
     @Override
-    public boolean onCreateOptionsMenu(Menu menu)
+    public boolean onCreateOptionsMenu(Menu menu) //for when the menu options loads
     {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
@@ -54,25 +54,25 @@ public class MainActivity extends Activity implements OnClickListener {
 
     }
     @Override
-    public boolean onOptionsItemSelected(MenuItem menu)
+    public boolean onOptionsItemSelected(MenuItem menu) //when a menu option is selected
     {
         switch(menu.getItemId())
         {
-            case R.id.menu_edit:
+            case R.id.menu_edit: //if the menu edit is selected
             {
                 Intent intent = new Intent(this,edit.class);
-                startActivity(intent);
+                startActivity(intent); //opens the edit activity
                 break;
             }
-            case R.id.menu_clear:
+            case R.id.menu_clear: //if the menu clear is selected
             {
-                myDeck.deckClear();
+                myDeck.deckClear(); //clears the deck by calling the deck's clear function
                 break;
             }
-            case R.id.menu_save:
+            case R.id.menu_save: //if the menu save is selected
             {
                 Intent intent = new Intent(this,save.class);
-                startActivity(intent);
+                startActivity(intent); //opens the save activity
                 break;
             }
         }
@@ -80,26 +80,26 @@ public class MainActivity extends Activity implements OnClickListener {
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick(View v) { //if something is clicked
         // Inflate the menu; this adds items to the action bar if it is present.
         switch (v.getId())
         {
-            case R.id.make_button:
+            case R.id.make_button: //if the make button is clicked
             {
                 Intent intent = new Intent(MainActivity.this,make.class);
-                startActivity(intent);
+                startActivity(intent); //opens the make activity
                 break;
             }
-            case R.id.study_button:
+            case R.id.study_button: //if the study button is clicked
             {
                 Intent intent = new Intent(MainActivity.this,study.class);
-                startActivity(intent);
+                startActivity(intent); //opens the study activity
                 break;
             }
-            case R.id.scores_button:
+            case R.id.scores_button: //if the scores button is clicked
             {
                 Intent intent = new Intent(MainActivity.this, scores.class);
-                startActivity(intent);
+                startActivity(intent); //opens the scores activity
                 break;
             }
             default:

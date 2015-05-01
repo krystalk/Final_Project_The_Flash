@@ -22,10 +22,26 @@
         android:textColor="#ffffffff"/>
 
     <TextView
+        android:id="@+id/number_right_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="#ffb6b6b6"
+        android:textColor="#ff1f36ff"
+        android:layout_gravity="center_horizontal"
+        android:text="Number Right:" />
+
+    <TextView
         android:id="@+id/percent_right_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Percentage Right:"
         android:layout_weight="1"
         android:gravity="center_vertical|center_horizontal"
         android:textAlignment="center"
@@ -36,6 +52,23 @@
         android:layout_marginLeft="5dp"
         android:background="#ffb6b6b6"
         android:textColor="#ff1f36ff"/>
+
+    <TextView
+        android:id="@+id/number_wrong_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical|center_horizontal"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="#ffb6b6b6"
+        android:textColor="#ff1f36ff"
+        android:layout_gravity="right"
+        android:text="Number Wrong:" />
 
     <TextView
         android:id="@+id/percent_wrong_text"
@@ -50,8 +83,7 @@
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
         android:background="#ffb6b6b6"
-        android:textColor="#ff1f36ff"
-        android:text="Percentage Wrong:" />
+        android:textColor="#ff1f36ff" />
 
     <Button
         android:id="@+id/back_button"

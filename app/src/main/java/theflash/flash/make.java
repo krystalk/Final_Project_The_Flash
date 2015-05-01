@@ -8,53 +8,50 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * Created by rickygomes on 4/25/15.
- */
-public class make extends Activity implements OnClickListener
+public class make extends Activity implements OnClickListener //the make class for making flashcards
 {
-    private Button addCard;
-    private Button back;
-    TextView input_ques;
-    TextView input_ans;
+    private Button addCard; //the Add Card button variable
+    private Button back; //the Back button variable
+    TextView input_ques; //the input question variable
+    TextView input_ans; //the input answer variable
 
     @Override
 
-    protected void onCreate(Bundle savedInstanceState)
+    protected void onCreate(Bundle savedInstanceState) //function for when the activity loads
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.make);
-        addCard = (Button) findViewById(R.id.button_addCard);
-        back = (Button) findViewById(R.id.back_button);
-        input_ques=(TextView)findViewById(R.id.question);
-        input_ans =(TextView)findViewById(R.id.answer);
+        setContentView(R.layout.make); //loads the make xml
+        addCard = (Button) findViewById(R.id.button_addCard); //sets the add card variable equal to the button_addCard
+        back = (Button) findViewById(R.id.back_button); //sets the back variable equal to the back_button
+        input_ques=(TextView)findViewById(R.id.question); //sets the input question variable equal to the question text field
+        input_ans =(TextView)findViewById(R.id.answer); //sets the input answer variable equal to the answer text field
 
-        addCard.setOnClickListener(this);
-        back.setOnClickListener(this);
+        addCard.setOnClickListener(this); //allows for the add card button to have a function when it is clicked
+        back.setOnClickListener(this); //allows for the back card button to have a function when it is clicked
 
     }
 
     @Override
-    public void onClick(View v)
+    public void onClick(View v) //when something is clicked
     {
         switch(v.getId())
         {
-            case R.id.button_addCard:
+            case R.id.button_addCard: //if the add card button is clicked
             {
-                if(input_ques.getText().toString().equals("")&&input_ans.getText().toString().equals(""))
+                if(input_ques.getText().toString().equals("")&&input_ans.getText().toString().equals("")) //if the question and answer text fields are left empty
                 {
-                    Toast.makeText(make.this, "You did not enter a question or an answer", Toast.LENGTH_LONG).show();
+                    Toast.makeText(make.this, "You did not enter a question or an answer", Toast.LENGTH_LONG).show(); //returns feedback that the a question and answer have not been entered
                 }
-                else
+                else //if a question and answer have ben entered
                 {
-                    MainActivity.myDeck.addCard(new card(input_ans.getText().toString(), input_ques.getText().toString()));
-                    input_ans.setText("");
-                    input_ques.setText("");
+                    MainActivity.myDeck.addCard(new card(input_ans.getText().toString(), input_ques.getText().toString())); //adds a new card in the Deck with the input strings
+                    input_ans.setText(""); //resets the answer text field
+                    input_ques.setText(""); //resets the question text field
                 }
 
                 break;
             }
-            case R.id.back_button:
+            case R.id.back_button: //if the back button is clicked
             {
                 finish();
                 break;
